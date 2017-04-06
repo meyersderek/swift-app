@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var nameLabel: UILabel!
     
     
@@ -20,20 +20,30 @@ class ViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: Any) {
         
-        nameLabel.text = "Answer: \(Int(textOne.text!)! + Int(textTwo.text!)!)"
-      
+        let addition = true
+        
+        if addition {
+            
+            nameLabel.text = "Answer: \(Int(textOne.text!)! + Int(textTwo.text!)!)"
+            
+        } else {
+            
+            nameLabel.text = "Answer: \(Int(textOne.text!)! - Int(textTwo.text!)!)"
+            
         }
+        
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+            override func viewDidLoad() {
+                super.viewDidLoad()
+                // Do any additional setup after loading the view, typically from a nib.
+            }
+            
+            override func didReceiveMemoryWarning() {
+                super.didReceiveMemoryWarning()
+                // Dispose of any resources that can be recreated.
+            }
+            
+            
 }
 
